@@ -16,7 +16,7 @@ const commonContextInfo = (sender) => ({
 });
 
 cmd({
-    pattern: "menu2",
+    pattern: "menu3",
     desc: "Show all bot commands in selection menu",
     category: "menu",
     react: "⚡",
@@ -463,7 +463,7 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
                             caption: `*╭──❍ 📜 \`M𝖠𝖨𝖭\` ❍─⋅⋅⋅◈*
-*├❖ ${config.PREFIX}ʙɪʙʟᴇ
+*├❖* ${config.PREFIX}ʙɪʙʟᴇ
 *├❖ ${config.PREFIX}ᴘɪɴɢ*
 *├❖ ${config.PREFIX}ᴘɪɴɢ2*
 *├❖ ${config.PREFIX}sᴘᴇᴇᴅ*

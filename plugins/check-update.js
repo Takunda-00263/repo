@@ -28,7 +28,7 @@ cmd({
     }
 
     // Fetch latest version data from GitHub
-    const rawVersionUrl = 'https://raw.githubusercontent.com/Keith-tech57/KEITH-XMD/main/data/version.json';
+    const rawVersionUrl = 'https://raw.githubusercontent.com/Takunda-00263/repo/main/data/version.json';
     let latestVersion = 'Unknown';
     let latestChangelog = 'No changelog available.';
     try {
