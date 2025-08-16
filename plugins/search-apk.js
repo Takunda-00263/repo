@@ -23,7 +23,7 @@ async (conn, mek, m, { from, q, sender, reply }) => {
             await conn.sendMessage(from, { react: { text: '❌', key: m.key } });
             return reply("❌ No results found for the given app name.");
         }
-
+        const Description = "> © Pᴏᴡᴇʀᴇᴅ Bʏ Kᴇɪᴛʜ-Xᴍᴅ";
         const app = response.data.result;
 
         const infoMessage = `
@@ -41,7 +41,7 @@ async (conn, mek, m, { from, q, sender, reply }) => {
 │• 🔄 Updated: ${app.updated}
 │• 🔗 Link: ${app.url}
 ╰─────────────────◆
-*Powered By Keith-Tech 🤍*`.trim();
+*${Description}*`.trim();
 
         if (app.icon) {
             await conn.sendMessage(

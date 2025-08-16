@@ -43,9 +43,9 @@ async (conn, mek, m, { from, sender, reply }) => {
 
         // Build response message
         const pingMessage = `
-> ╔═══════════════╗
-> ║    \`KEITH-XMD\` 
-> ╚═══════════════╝
+> ╔══════════════╗
+> ║   \`KEITH-XMD\` 
+> ╚══════════════╝
    \`\`\`${statusEmoji}\`\`\`
    
 > *RESPONSE:* ${responseTime.toFixed(2)}ms

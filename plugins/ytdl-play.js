@@ -129,7 +129,7 @@ cmd({
             return reply("Failed to fetch the audio. Please try again later.");
         }
         
-        let ytmsg = `\n\`*KEITH-XMD MUSIC DOWNLOADER🎵*\`
+        let ytmsg = `\n\`KEITH-XMD MUSIC DOWNLOADER🎵\`
         
         
  \`\`\`🎵 Song Details\`\`\`
