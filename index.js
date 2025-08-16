@@ -164,6 +164,7 @@ async function connectToWA() {
                 }
             });
             console.log('[✅] Plugins installed successfully ✅');
+            console.log('[🌟] Star and Fork [🍽️] KEITH-XMD');
 
             
                 // Send connection message
@@ -192,7 +193,7 @@ async function connectToWA() {
 > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋᴇɪᴛʜ`;
                     
                     await conn.sendMessage(conn.user.id, { 
-                        image: { url: `https://files.catbox.moe/gyyzyw.jpg` }, 
+                        image: { url: `https://files.catbox.moe/304pb1.jpg` }, 
                         caption: upMessage 
                     });
                     
