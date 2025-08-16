@@ -31,8 +31,8 @@ let now = new Date();
         });
 
 
-let dec = `\n*╭┄┄┄┄┄✪ ${botName} ✪┄┄┄⊷*
-*┃❂╭──────────◎*
+let dec = `\n*╭┄┄✪ ${botName} ✪┄┄⊷*
+*┃❂╭────────◎*
 *┃❂│ Owner:* ${config.OWNER_NAME}
 *┃❂│ Runtime:* ${runtime(process.uptime())}
 *┃❂│ Baileys:* Mᴜʟᴛɪ Dᴇᴠɪᴄᴇ
@@ -42,8 +42,8 @@ let dec = `\n*╭┄┄┄┄┄✪ ${botName} ✪┄┄┄⊷*
 *┃❂│ Mode:* ${config.MODE}
 *┃❂│ Status:* *Oɴʟɪɴᴇ*
 *┃❂│ Version:* 2.0.0
-*┃❂╰───────────◎*
-*╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄⊷*
+*┃❂╰─────────◎*
+*╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄⊷*
 
 
 *╭┄┄┄✪ DOWNLOAD MENU ✪┈◎*
