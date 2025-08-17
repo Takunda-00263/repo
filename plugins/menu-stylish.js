@@ -16,7 +16,7 @@ const commonContextInfo = (sender) => ({
 });
 
 cmd({
-    pattern: "menu3",
+    pattern: "menu2",
     desc: "Show all bot commands in selection menu",
     category: "menu",
     react: "⚡",
@@ -24,39 +24,45 @@ cmd({
 },
 async (conn, mek, m, { from, sender, pushname, reply }) => {
     try {
-   
+        let botName = "𝐊𝐄𝐈𝐓𝐇-𝐗𝐌𝐃";
         let totalCommands = Object.keys(commands).length;
-        const caption = `╭──✬✪ *${config.BOT_NAME}* ✬✪──◈
-┃❍╭────────⊷
-┃❍│👑 *Oᴡɴᴇʀ:* ${config.OWNER_NAME}
-┃❍│⚙️ *Pʀᴇғɪx:* [${config.PREFIX}]
-┃❍│🔧 *Vᴇʀsɪᴏɴ:* 2.0.0 
-┃❍│📜 *Tᴏᴛᴀʟ Cᴍᴅs:* ${totalCommands}
-┃❍│⏱️ *Upᴛɪᴍᴇ:* ${runtime(process.uptime())}
-┃❍│💻 *Developer:* *Kᴇɪᴛʜ*
-┃❍╰─────────⊷
-╰───────────────◈
+        const caption = `
+*╭┄┄✪ ${botName} ✪┄┄⊷*
+*┃❂┬┄✯✯✯✯✯✯✯✯*
+*┃❂┊* 𝗢𝘄𝗻𝗲𝗿: ${config.OWNER_NAME}
+*┃❂┊* 𝗕𝗮𝗶𝗹𝗲𝘆𝘀: Multi Device
+*┃❂┊* 𝗗𝗮𝘁𝗲: ${currentDate}
+*┃❂┊* 𝗧𝘆𝗽𝗲: Nodejs
+*┃❂┊* 𝗨𝗽𝘁𝗶𝗺𝗲: ${runtime(process.uptime())}
+*┃❂┊* 𝗣𝗿𝗲𝗳𝗶𝘅: ${config.PREFIX}
+*┃❂┊* 𝗠𝗼𝗱𝗲: ${config.MODE}
+*┃❂┊* 𝗥𝗮𝗺: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
+*┃❂┊* 𝗦𝘁𝗮𝘁𝘂𝘀:* *Online*
+*┃❂┊* 𝗩𝗲𝗿𝘀𝗶𝗼𝗻:* 2.0.0
+*┃❂┴┄✯✯✯✯✯✯✯✯*
+*╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈⊷*
 
-*╭━━* ⟮ 𝐌𝐀𝐈𝐍-𝐌𝐄𝐍𝐔 ⟯ *━∙∙⊷*
-*┃❍╭╴╴╴╴╴╴╴╴╴╴⊶*
-*┃❍│* 1. ʙɪʙʟᴇᴍᴇɴᴜ
-*┃❍│* 2. ǫᴜʀᴀɴᴍᴇɴᴜ
-*┃❍│* 3. sᴇᴛᴛɪɴɢᴍᴇɴᴜ
-*┃❍│* 4. ᴀɪᴍᴇɴᴜ
-*┃❍│* 5. ᴀɴɪᴍᴇᴍᴇɴᴜ
-*┃❍│* 6. ʀᴇᴀᴄᴛɪᴏɴsᴍᴇɴᴜ
-*┃❍│* 7. ᴄᴏɴᴠᴇʀᴛᴍᴇɴᴜ
-*┃❍│* 8. ғᴜɴᴍᴇɴᴜ
-*┃❍│* 9. ᴅᴏᴡɴʟᴏᴀᴅᴍᴇɴᴜ
-*┃❍│* 10. ɢʀᴏᴜᴘᴍᴇɴᴜ
-*┃❍│* 11. ᴍᴀɪɴᴍᴇɴᴜ
-*┃❍│* 12. ᴏᴡɴᴇʀᴍᴇɴᴜ
-*┃❍│* 13. ᴏᴛʜᴇʀᴍᴇɴᴜ
-*┃❍│* 14. ʟᴏɢᴏᴍᴇɴᴜ
-*┃❍│* 15. ᴛᴏᴏʟsᴍᴇɴᴜ
-*┃❍╰╴╴╴╴╴╴╴╴╴╴╴⊶*
-*╰───────────────⋅⋅⊷*
-> ʀᴇᴘʟʏ ᴡɪᴛʜ ᴀ ɴᴜᴍʙᴇʀ ᴛᴏ ᴏᴘᴇɴ ᴀ ᴄᴀᴛᴇɢᴏʀʏ
+> \`\`\`ʀᴇᴘʟʏ ᴡɪᴛʜ ᴀ ɴᴜᴍʙᴇʀs ʙᴇʟᴏᴡ\`\`\`
+
+*╭──◇* ⟮ 𝗖𝗔𝗧𝗘𝗚𝗢𝗥𝗜𝗘𝗦 ⟯ *◇─∙∙⊷*
+*┃➛╭─────────────⊶*
+*┃➛│* 1. ʙɪʙʟᴇᴍᴇɴᴜ
+*┃➛│* 2. ǫᴜʀᴀɴᴍᴇɴᴜ
+*┃➛│* 3. sᴇᴛᴛɪɴɢᴍᴇɴᴜ
+*┃➛│* 4. ᴀɪᴍᴇɴᴜ
+*┃➛│* 5. ᴀɴɪᴍᴇᴍᴇɴᴜ
+*┃➛│* 6. ʀᴇᴀᴄᴛɪᴏɴsᴍᴇɴᴜ
+*┃➛│* 7. ᴄᴏɴᴠᴇʀᴛᴍᴇɴᴜ
+*┃➛│* 8. ғᴜɴᴍᴇɴᴜ
+*┃➛│* 9. ᴅᴏᴡɴʟᴏᴀᴅᴍᴇɴᴜ
+*┃➛│* 10. ɢʀᴏᴜᴘᴍᴇɴᴜ
+*┃➛│* 11. ᴍᴀɪɴᴍᴇɴᴜ
+*┃➛│* 12. ᴏᴡɴᴇʀᴍᴇɴᴜ
+*┃➛│* 13. ᴏᴛʜᴇʀᴍᴇɴᴜ
+*┃➛│* 14. ʟᴏɢᴏᴍᴇɴᴜ
+*┃➛│* 15. ᴛᴏᴏʟsᴍᴇɴᴜ
+*┃➛╰────────────⊶*
+*╰─────────────────⋅⋅⊷*
 
 > ${config.DESCRIPTION}`;
 
@@ -86,19 +92,19 @@ async (conn, mek, m, { from, sender, pushname, reply }) => {
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
                             caption: `*╭────⬡ QURAN MENU ⬡────*
-*├❖ • surah <number>*
-*├❖ • ayat <surah:verse>*
-*├❖ • tafsir <surah>*
-*├❖ • listreciters*
-*├❖ • play <reciter> <surah>*
-*├❖ • searchquran <query>*
-*├❖ • quranpdf <surah>*
-*├❖ • prayer <city>*
-*├❖ • setlocation <city>*
-*├❖ • mylocation*
-*├❖ • prayerfull <city>*
-*├❖ • prayernext <city>*
-*├❖ • hijridate*
+*├▢ • surah 
+*├▢ • ayat <surah:
+*├▢ • tafsir <surah>*
+*├▢ • listreciters*
+*├▢ • play <reciter> <surah>*
+*├▢ • searchquran <query>*
+*├▢ • quranpdf <surah>*
+*├▢ • prayer <city>*
+*├▢ • setlocation <city>*
+*├▢ • mylocation*
+*├▢ • prayerfull <city>*
+*├▢ • prayernext <city>*
+*├▢ • hijridate*
 *╰────────────────*
 > ${config.DESCRIPTION}`, 
 contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
@@ -191,40 +197,40 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                             caption: `*╭────⬡ *SETTING MENU* ⬡────⭓
 │
 ├───⬡ *BOT CONFIGURATION* ⬡───
-│├❖ .prefix new prefix
-│├❖ .botname new name
-│├❖ .ownername new name
-│├❖ .botimage reply to image 
-│├❖ .mode public/private
+│├▢ .prefix new prefix
+│├▢ .botname new name
+│├▢ .ownername new name
+│├▢ .botimage reply to image 
+│├▢ .mode public/private
 │
 ├───⬡ *AUTO FEATURES* ⬡───
-│├❖ .autoreact on/off
-│├❖ .autoreply on/off
-│├❖ .autosticker on/off
-│├❖ .autotyping on/off
-│├❖ .autostatusview on/off
-│├❖ .autostatusreact on/off
-│├❖ .autostatusreply on/off
-│├❖ .autorecoding on/off
-│├❖ .alwaysonline on/off
+│├▢ .autoreact on/off
+│├▢ .autoreply on/off
+│├▢ .autosticker on/off
+│├▢ .autotyping on/off
+│├▢ .autostatusview on/off
+│├▢ .autostatusreact on/off
+│├▢ .autostatusreply on/off
+│├▢ .autorecoding on/off
+│├▢ .alwaysonline on/off
 │
 ├───⬡ *GROUP SETTINGS* ⬡───
-│├❖ .welcome on/off
-│├❖ .goodbye on/off
-│├❖ .antilink on/off
-│├❖ .antilinkkick on/off
-│├❖ .deletelink on/off
-│├❖ .antibad on/off
-│├❖ .antibot on/off
+│├▢ .welcome on/off
+│├▢ .goodbye on/off
+│├▢ .antilink on/off
+│├▢ .antilinkkick on/off
+│├▢ .deletelink on/off
+│├▢ .antibad on/off
+│├▢ .antibot on/off
 │
 ├───⬡ *MESSAGE SETTINGS* ⬡───
-│├❖ .read-message on/off
-│├❖ .mention-reply on/off
-│├❖ .admin-action on/off
+│├▢ .read-message on/off
+│├▢ .mention-reply on/off
+│├▢ .admin-action on/off
 │
 ├───⬡ *CUSTOMIZATION* ⬡───
-│├❖ .creact on/off
-│├❖ .cemojis ❤️,🧡,💛
+│├▢ .creact on/off
+│├▢ .cemojis ❤️,🧡,💛
 │
 ╰────⬡ *Use ${config.PREFIX}command on/off* ⬡────⭓
 > ${config.DESCRIPTION}`,
@@ -235,25 +241,23 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                     case "4": // AI Menu
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
-                            caption: `*╭───❍ 🤖 \`A𝖨\` ❍─⋅⋅⋅◈*
-*├❖ ${config.PREFIX}ᴀɪ*
-*├❖ ${config.PREFIX}ɢᴘᴛ*
-*├❖ ${config.PREFIX}ɢᴘᴛ2*
-*├❖ ${config.PREFIX}ɢᴘᴛ3*
-*├❖ ${config.PREFIX}ɢᴘᴛᴍɪɴɪ*
-*├❖ ${config.PREFIX}ᴍᴇᴛᴀ*
-*├❖ ${config.PREFIX}ʙʟᴀᴄᴋʙᴏx*
-*├❖ ${config.PREFIX}ʟᴜᴍᴀ*
-*├❖ ${config.PREFIX}ᴅᴊ*
-*├❖ ${config.PREFIX}ɴᴏᴠᴀ*
-*├❖ ${config.PREFIX}ᴋᴇɪᴛʜ*
-*├❖ ${config.PREFIX}ɢᴘᴛ4*
-*├❖ ${config.PREFIX}ʙɪɴɢ*
-*├❖ ${config.PREFIX}ɪᴍᴀɢᴇ*
-*├❖ ${config.PREFIX}ɪᴍᴀɢᴇ2*
-*├❖ ${config.PREFIX}ᴄᴀᴘɪʟᴏᴛ*
-*╰──────────────⋅⋅⋅◈*
-
+                            caption: `*╭────⬡ AI MENU ⬡────*
+*├▢ • ai <query>*
+*├▢ • gpt <query>*
+*├▢ • gpt2 <query>*
+*├▢ • gpt3 <query>*
+*├▢ • gpt4 <query>*
+*├▢ • bard <query>*
+*├▢ • bing <query>*
+*├▢ • copilot <query>*
+*├▢ • imagine <prompt>*
+*├▢ • imagine2 <prompt>*
+*├▢ • blackbox <query>*
+*├▢ • luma <query>*
+*├▢ • meta <query>*
+*├▢ • khan <query>*
+*├▢ • jawad <query>*
+*╰────────────────*
 > ${config.DESCRIPTION}`,
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
                         }, { quoted: receivedMsg });
@@ -262,29 +266,24 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                     case "5": // Anime Menu
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
-                            caption: `*╭──❍ 🗣️ \`A𝖭𝗂𝖬𝖤\` ❍─⋅⋅⋅◈*
-*├❖ ${config.PREFIX}ғᴀᴄᴋ*
-*├❖ ${config.PREFIX}ᴛʀᴜᴛʜ*
-*├❖ ${config.PREFIX}ᴅᴀʀᴇ*
-*├❖ ${config.PREFIX}ᴅᴏɢ*
-*├❖ ${config.PREFIX}ᴀᴡᴏᴏ*
-*├❖ ${config.PREFIX}ɢᴀʀʟ*
-*├❖ ${config.PREFIX}ᴡᴀɪғᴜ*
-*├❖ ${config.PREFIX}ɴᴇᴋᴏ*
-*├❖ ${config.PREFIX}ᴍᴇɢɴᴜᴍɪɴ*
-*├❖ ${config.PREFIX}ɴᴇᴋᴏ*
-*├❖ ${config.PREFIX}ᴍᴀɪᴅ*
-*├❖ ${config.PREFIX}ʟᴏʟɪ*
-*├❖ ${config.PREFIX}ᴀɴɪᴍᴇɢɪʀʟ*
-*├❖ ${config.PREFIX}ᴀɴɪᴍᴇɢɪʀʟ1*
-*├❖ ${config.PREFIX}ᴀɴɪᴍᴇɢɪʀʟ2*
-*├❖ ${config.PREFIX}ᴀɴɪᴍᴇɢɪʀʟ3*
-*├❖ ${config.PREFIX}ᴀɴɪᴍᴇɢɪʀʟ4*
-*├❖ ${config.PREFIX}ᴀɴɪᴍᴇɴᴇᴡs*
-*├❖ ${config.PREFIX}ғᴏx*
-*├❖ ${config.PREFIX}ɴᴀʀᴜᴛᴏ*
-*╰─────────────⋅⋅⋅◈*
-
+                            caption: `*╭────⬡ ANIME MENU ⬡────*
+*├▢ • waifu*
+*├▢ • neko*
+*├▢ • loli*
+*├▢ • maid*
+*├▢ • animegirl*
+*├▢ • animeboy*
+*├▢ • animenews*
+*├▢ • animequote*
+*├▢ • naruto*
+*├▢ • animewall*
+*├▢ • animememe*
+*├▢ • anime1*
+*├▢ • anime2*
+*├▢ • anime3*
+*├▢ • anime4*
+*├▢ • anime5*
+*╰────────────────*
 > ${config.DESCRIPTION}`,
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
                         }, { quoted: receivedMsg });
@@ -293,35 +292,24 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                     case "6": // Reactions
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
-                            caption: `*╭─❍ 💀 \`R𝖤𝖠𝖢𝖳𝖨𝖮𝖭𝖲\` ❍─⋅⋅⋅◈*
-*├❖ ${config.PREFIX}ʙᴜʟʟʏ*
-*├❖ ${config.PREFIX}ᴄᴜᴅᴅʟᴇ*
-*├❖ ${config.PREFIX}ᴄʀʏ*
-*├❖ ${config.PREFIX}ʜᴜɢ*
-*├❖ ${config.PREFIX}ᴀᴡᴏᴏ*
-*├❖ ${config.PREFIX}ᴋɪss*
-*├❖ ${config.PREFIX}ʟɪᴄᴋ*
-*├❖ ${config.PREFIX}pᴀᴛ*
-*├❖ ${config.PREFIX}sᴍᴜʜ*
-*├❖ ${config.PREFIX}ʙᴏɴᴋ*
-*├❖ ${config.PREFIX}ʏᴇᴇᴛ*
-*├❖ ${config.PREFIX}ʙʟᴜsʜ*
-*├❖ ${config.PREFIX}sᴍɪʟᴇ*
-*├❖ ${config.PREFIX}ᴡᴀᴠᴇ*
-*├❖ ${config.PREFIX}ʜɪɢʜғɪᴠᴇ*
-*├❖ ${config.PREFIX}ʜᴀɴᴅʜᴏʟᴅ*
-*├❖ ${config.PREFIX}ɴᴏᴍ*
-*├❖ ${config.PREFIX}ʙɪᴛᴇ*
-*├❖ ${config.PREFIX}ɢʟᴏᴍᴘ*
-*├❖ ${config.PREFIX}sʟᴀᴘ*
-*├❖ ${config.PREFIX}ᴋɪʟʟ*
-*├❖ ${config.PREFIX}ʜᴀᴘᴘʏ*
-*├❖ ${config.PREFIX}ᴡɪɴᴋ*
-*├❖ ${config.PREFIX}ᴘᴏᴋᴇ*
-*├❖ ${config.PREFIX}ᴅᴀɴᴄᴇ*
-*├❖ ${config.PREFIX}ᴄʀɪɴɢ*
-*╰──────────────⋅⋅⋅◈*
-
+                            caption: `*╭────⬡ REACTIONS ⬡────*
+*├▢ • bully @tag*
+*├▢ • cuddle @tag*
+*├▢ • hug @tag*
+*├▢ • kiss @tag*
+*├▢ • lick @tag*
+*├▢ • pat @tag*
+*├▢ • slap @tag*
+*├▢ • kick @tag*
+*├▢ • poke @tag*
+*├▢ • bite @tag*
+*├▢ • yeet @tag*
+*├▢ • blush @tag*
+*├▢ • smile @tag*
+*├▢ • wave @tag*
+*├▢ • highfive @tag*
+*├▢ • handhold @tag*
+*╰────────────────*
 > ${config.DESCRIPTION}`,
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
                         }, { quoted: receivedMsg });
@@ -331,19 +319,19 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
                             caption: `*╭────⬡ CONVERT MENU ⬡────*
-*├❖ • sticker <image>*
-*├❖ • sticker2 <video>*
-*├❖ • tomp3 <video>*
-*├❖ • tomp4 <audio>*
-*├❖ • tts <text>*
-*├❖ • trt <text> <lang>*
-*├❖ • base64 <text>*
-*├❖ • unbase64 <text>*
-*├❖ • binary <text>*
-*├❖ • dbinary <binary>*
-*├❖ • tinyurl <url>*
-*├❖ • emojimix <emoji+emoji>*
-*├❖ • fancy <text>*
+*├▢ • sticker <image>*
+*├▢ • sticker2 <video>*
+*├▢ • tomp3 <video>*
+*├▢ • tomp4 <audio>*
+*├▢ • tts <text>*
+*├▢ • trt <text> <lang>*
+*├▢ • base64 <text>*
+*├▢ • unbase64 <text>*
+*├▢ • binary <text>*
+*├▢ • dbinary <binary>*
+*├▢ • tinyurl <url>*
+*├▢ • emojimix <emoji+emoji>*
+*├▢ • fancy <text>*
 *╰────────────────*
 > ${config.DESCRIPTION}`,
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
@@ -353,27 +341,21 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                     case "8": // Fun Menu
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
-                            caption: `*╭──❍ 😀 \`F𝖴𝖭\` ❍─⋅⋅⋅◈*
-*├❖ ${config.PREFIX}sʜᴀᴘᴀʀ*
-*├❖ ${config.PREFIX}ʀᴀᴛᴇ*
-*├❖ ${config.PREFIX}ɪɴsᴜʟᴛ*
-*├❖ ${config.PREFIX}ʜᴀᴋ*
-*├❖ ${config.PREFIX}sʜɪᴘ*
-*├❖ ${config.PREFIX}ᴄʜᴀʀᴀᴄᴛᴇʀ*
-*├❖ ${config.PREFIX}ᴘɪᴄᴋᴜᴘ*
-*├❖ ${config.PREFIX}ᴊᴏᴋᴇ*
-*├❖ ${config.PREFIX}ʜʀᴛ*
-*├❖ ${config.PREFIX}ʜᴘʏ*
-*├❖ ${config.PREFIX}sʏᴅ*
-*├❖ ${config.PREFIX}ᴀɴɢᴇʀ*
-*├❖ ${config.PREFIX}sʜʏ*
-*├❖ ${config.PREFIX}ᴋɪss*
-*├❖ ${config.PREFIX}ᴍᴏɴ*
-*├❖ ${config.PREFIX}ᴄᴜɴғᴜsᴇᴅ*
-*├❖ ${config.PREFIX}ʜᴀɴᴅ*
-*├❖ ${config.PREFIX}ɴɪᴋᴀʟ*
-*├❖ ${config.PREFIX}ʜᴏʟᴅ*
-*╰───────────────⋅⋅⋅◈*
+                            caption: `*╭────⬡ FUN MENU ⬡────*
+*├▢ • joke*
+*├▢ • meme*
+*├▢ • fact*
+*├▢ • quote*
+*├▢ • truth*
+*├▢ • dare*
+*├▢ • ship @tag1 @tag2*
+*├▢ • rate <something>*
+*├▢ • hack @tag*
+*├▢ • character*
+*├▢ • pickup*
+*├▢ • wyr*
+*├▢ • wouldyourather*
+*╰────────────────*
 > ${config.DESCRIPTION}`,
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
                         }, { quoted: receivedMsg });
@@ -382,34 +364,25 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                     case "9": // Download Menu
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
-                            caption: `*╭──❍ 📥 \`D𝖮𝖶𝖭𝖫𝖮𝖠𝖣\` ❍─∙∙◈*
-*├❖ ${config.PREFIX}fᴀᴄᴇʙᴏᴏᴋ*
-*├❖ ${config.PREFIX}mᴇᴅɪᴀꜰɪʀᴇ*
-*├❖ ${config.PREFIX}tɪᴋᴛᴏᴋ*
-*├❖ ${config.PREFIX}sᴇᴛᴛɪɴɢs*
-*├❖ ${config.PREFIX}tᴡɪᴛᴛᴇʀ*
-*├❖ ${config.PREFIX}iɴꜱᴛᴀ*
-*├❖ ${config.PREFIX}aᴘᴋ*
-*├❖ ${config.PREFIX}iᴍɢ*
-*├❖ ${config.PREFIX}tᴛ2*
-*├❖ ${config.PREFIX}pɪɴꜱ*
-*├❖ ${config.PREFIX}aᴘᴋ2*
-*├❖ ${config.PREFIX}fʙ2*
-*├❖ ${config.PREFIX}pɪɴᴛᴇʀᴇꜱᴛ*
-*├❖ ${config.PREFIX}sᴘᴏᴛɪꜰʏ*
-*├❖ ${config.PREFIX}pʟᴀʏ*
-*├❖ ${config.PREFIX}pʟᴀʏ2*
-*├❖ ${config.PREFIX}aᴜᴅɪᴏ*
-*├❖ ${config.PREFIX}vɪᴅᴇᴏ*
-*├❖ ${config.PREFIX}vɪᴅᴇᴏ2*
-*├❖ ${config.PREFIX}yᴛᴍᴘ3*
-*├❖ ${config.PREFIX}yᴛᴍᴘ4*
-*├❖ ${config.PREFIX}sᴏɴɢ*
-*├❖ ${config.PREFIX}dᴀʀᴀᴍᴀ*
-*├❖ ${config.PREFIX}gᴅʀɪᴠᴇ*
-*├❖ ${config.PREFIX}sꜱᴡᴇʙ*
-*├ ${config.PREFIX}tɪᴋꜱ*
-*╰─────────────∙∙◈*
+                            caption: `*╭────⬡ DOWNLOAD MENU ⬡────*
+*├▢ • ytmp3 <url>*
+*├▢ • ytmp4 <url>*
+*├▢ • fb <url>*
+*├▢ • fb2 <url>*
+*├▢ • fb3 <url>*
+*├▢ • tiktok <url>*
+*├▢ • insta <url>*
+*├▢ • twitter <url>*
+*├▢ • spotify <url>*
+*├▢ • play <query>*
+*├▢ • play2 <query>*
+*├▢ • play3 <query>*
+*├▢ • play4 <query>*
+*├▢ • play5 <query>*
+*├▢ • playx <query>*
+*├▢ • mediafire <url>*
+*├▢ • gdrive <url>*
+*╰────────────────*
 > ${config.DESCRIPTION}`,
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
                         }, { quoted: receivedMsg });
@@ -418,42 +391,27 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                     case "10": // Group Menu
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
-                            caption: `*╭──❍ 👥 \`G𝖱𝖮𝖴𝖯\` ❍─⋅⋅◈*
-*├❖ ${config.PREFIX}gʀᴏᴜᴘʟɪɴᴋ*
-*├❖ ${config.PREFIX}kɪᴄᴋᴀʟʟ*
-*├❖ ${config.PREFIX}ᴋɪᴄᴋᴀʟʟ2*
-*├❖ ${config.PREFIX}ᴋɪᴄᴋᴀʟʟ3*
-*├❖ ${config.PREFIX}ᴀᴅᴅ*
-*├❖ ${config.PREFIX}ʀᴇᴍᴏᴠᴇ*
-*├❖ ${config.PREFIX}ᴋɪᴄᴋ*
-*├❖ ${config.PREFIX}ᴘʀᴏᴍᴏᴛᴇ*
-*├❖ ${config.PREFIX}ᴅᴇᴍᴏᴛᴇ*
-*├❖ ${config.PREFIX}ᴅɪsᴍɪss*
-*├❖ ${config.PREFIX}ʀᴇᴠᴏᴋᴇ*
-*├❖ ${config.PREFIX}sᴇᴛɢᴏᴏᴅʙʏᴇ*
-*├❖ ${config.PREFIX}sᴇᴛᴡᴇʟᴄᴏᴍᴇ*
-*├❖ ${config.PREFIX}ᴅᴇʟᴇᴛᴇ*
-*├❖ ${config.PREFIX}ɢᴇᴛᴘɪᴄ*
-*├❖ ${config.PREFIX}ɢɪɴғᴏ*
-*├❖ ${config.PREFIX}ᴅɪsᴀᴘᴘᴇᴀʀ ᴏɴ*
-*├❖ ${config.PREFIX}ᴅɪsᴀᴘᴘᴇᴀʀ ᴏғғ*
-*├❖ ${config.PREFIX}ᴅɪsᴀᴘᴘᴇᴀʀ 7ᴅ,24ʜ*
-*├❖ ${config.PREFIX}ᴀʟʟʀᴇǫ*
-*├❖ ${config.PREFIX}ᴜᴘᴅᴀᴛᴇɢɴᴀᴍᴇ*
-*├❖ ${config.PREFIX}ᴜᴘᴅᴀᴛᴇᴅᴇsᴄ*
-*├❖ ${config.PREFIX}ᴊᴏɪɴʀᴇǫᴜᴇsᴛ*
-*├❖ ${config.PREFIX}sᴇɴᴅᴅᴍ*
-*├❖ ${config.PREFIX}ɴɪᴋᴀʟ*
-*├❖ ${config.PREFIX}ᴍᴜᴛᴇ*
-*├❖ ${config.PREFIX}ᴜɴᴍᴜᴛᴇ*
-*├❖ ${config.PREFIX}ʟᴏᴄᴋɢᴄ*
-*├❖ ${config.PREFIX}ᴜɴʟᴏᴄᴋɢᴄ*
-*├❖ ${config.PREFIX}ɪɴᴠɪᴛᴇ*
-*├❖ ${config.PREFIX}ᴛᴀɢ*
-*├❖ ${config.PREFIX}ʜɪᴅᴇᴛɢ*
-*├❖ ${config.PREFIX}ᴛᴀɢᴀʟʟ*
-*├❖ ${config.PREFIX}ᴛᴀɢᴀᴅᴍɪɴs*
-*╰──────────────⋅⋅◈*
+                            caption: `*╭────⬡ GROUP MENU ⬡────*
+*├▢ • add @tag*
+*├▢ • kick @tag*
+*├▢ • promote @tag*
+*├▢ • demote @tag*
+*├▢ • grouplink*
+*├▢ • revoke*
+*├▢ • setname <text>*
+*├▢ • setdesc <text>*
+*├▢ • setwelcome <text>*
+*├▢ • setgoodbye <text>*
+*├▢ • welcome on/off*
+*├▢ • goodbye on/off*
+*├▢ • lockgc*
+*├▢ • unlockgc*
+*├▢ • mute*
+*├▢ • unmute*
+*├▢ • tagall*
+*├▢ • tagadmins*
+*├▢ • hidetag <text>*
+*╰────────────────*
 > ${config.DESCRIPTION}`,
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
                         }, { quoted: receivedMsg });
@@ -462,20 +420,18 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                     case "11": // Main Menu
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
-                            caption: `*╭──❍ 📜 \`M𝖠𝖨𝖭\` ❍─⋅⋅⋅◈*
-*├❖* ${config.PREFIX}ʙɪʙʟᴇ
-*├❖ ${config.PREFIX}ᴘɪɴɢ*
-*├❖ ${config.PREFIX}ᴘɪɴɢ2*
-*├❖ ${config.PREFIX}sᴘᴇᴇᴅ*
-*├❖ ${config.PREFIX}ʟɪᴠᴇ*
-*├❖ ${config.PREFIX}ᴀʟɪᴠᴇ*
-*├❖ ${config.PREFIX}ʀᴜɴᴛɪᴍᴇ*
-*├❖ ${config.PREFIX}ᴜᴘᴛɪᴍᴇ*
-*├❖ ${config.PREFIX}ʀᴇᴘᴏ*
-*├❖ ${config.PREFIX}ᴏᴡɴᴇʀ*
-*├❖ ${config.PREFIX}ʀᴇsᴛᴀʀᴛ*
-*├❖ ${config.PREFIX}sᴇᴛᴛɪɴɢs*
-*╰──────────────⋅⋅⋅◈*
+                            caption: `*╭────⬡ MAIN MENU ⬡────*
+*├▢ • ping*
+*├▢ • runtime*
+*├▢ • uptime*
+*├▢ • speedtest*
+*├▢ • owner*
+*├▢ • support*
+*├▢ • menu*
+*├▢ • menu2*
+*├▢ • listcmd*
+*├▢ • allmenu*
+*╰────────────────*
 > ${config.DESCRIPTION}`,
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
                         }, { quoted: receivedMsg });
@@ -484,27 +440,24 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                     case "12": // Owner Menu
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
-                            caption: `*╭──❍ 👑 \`O𝖶𝖭𝖤𝖱\` ❍─⋅⋅⋅◈*
-*├❖ ${config.PREFIX}ᴏᴡɴᴇʀ*
-*├❖ ${config.PREFIX}ᴍᴇɴᴜ*
-*├❖ ${config.PREFIX}ᴍᴇɴᴜ2*
-*├❖ ${config.PREFIX}ᴠᴠ*
-*├❖ ${config.PREFIX}ʟɪsᴛᴄᴍᴅ*
-*├❖ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ*
-*├❖ ${config.PREFIX}ʀᴇᴘᴏ*
-*├❖ ${config.PREFIX}ʙʟᴏᴄᴋ*
-*├❖ ${config.PREFIX}ᴜɴʙʟᴏᴄᴋ*
-*├❖ ${config.PREFIX}ғᴜʟʟᴘᴘ*
-*├❖ ${config.PREFIX}sᴇᴛᴘᴘ*
-*├❖ ${config.PREFIX}ʀᴇsᴛᴀʀᴛ*
-*├❖ ${config.PREFIX}sʜᴜᴛᴅᴏᴡɴ*
-*├❖ ${config.PREFIX}ᴜᴘᴅᴀᴛᴇᴄᴍᴅ*
-*├❖ ${config.PREFIX}ᴀʟɪᴠᴇ*
-*├❖ ${config.PREFIX}ᴘɪɴɢ*
-*├❖ ${config.PREFIX}ɢᴊɪᴅ*
-*├❖ ${config.PREFIX}ᴊɪᴅ*
-*╰──────────────⋅⋅⋅◈*
-
+                            caption: `*╭────⬡ OWNER MENU ⬡────*
+*├▢ • broadcast <message>*
+*├▢ • ban @tag*
+*├▢ • unban @tag*
+*├▢ • block @tag*
+*├▢ • unblock @tag*
+*├▢ • join <link>*
+*├▢ • leave*
+*├▢ • setpp <image>*
+*├▢ • fullpp*
+*├▢ • shutdown*
+*├▢ • restart*
+*├▢ • update*
+*├▢ • getsudo*
+*├▢ • addsudo @tag*
+*├▢ • delsudo @tag*
+*├▢ • banlist*
+*╰────────────────*
 > ${config.DESCRIPTION}`,
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
                         }, { quoted: receivedMsg });
@@ -513,38 +466,21 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                     case "13": // Other Menu
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
-                            caption: `*╭──❍ 📡 \`O𝖳𝖧𝖤𝖱\` ❍─⋅⋅⋅◈*
-*├❖ ${config.PREFIX}ᴛɪᴍᴇɴᴏᴡ*
-*├❖ ${config.PREFIX}ᴅᴀᴛᴇ*
-*├❖ ${config.PREFIX}ᴄᴏᴜɴᴛ*
-*├❖ ${config.PREFIX}ᴄᴀʟᴄᴜʟᴀᴛᴇ*
-*├❖ ${config.PREFIX}ᴄᴏᴜɴᴛx*
-*├❖ ${config.PREFIX}ғʟɪᴘx*
-*├❖ ${config.PREFIX}ᴄᴏɪɴғʟɪᴘ*
-*├❖ ${config.PREFIX}ʀᴄᴏʟᴏʀ*
-*├❖ ${config.PREFIX}ʀᴏʟʟ*
-*├❖ ${config.PREFIX}ғᴀᴄᴛ*
-*├❖ ${config.PREFIX}ᴄᴘᴘ*
-*├❖ ${config.PREFIX}ʀᴡ*
-*├❖ ${config.PREFIX}ᴘᴀɪʀ*
-*├❖ ${config.PREFIX}ᴘᴀɪʀ2*
-*├❖ ${config.PREFIX}ᴘᴀɪʀ3*
-*├❖ ${config.PREFIX}ғᴀɴᴄʏ*
-*├❖ ${config.PREFIX}ʟᴏɢᴏ*
-*├❖ ${config.PREFIX}ᴅᴇғɪɴᴇ*
-*├❖ ${config.PREFIX}ɴᴇᴡs*
-*├❖ ${config.PREFIX}ᴍᴏᴠɪᴇ*
-*├❖ ${config.PREFIX}ᴡᴇᴀᴛʜᴇʀ*
-*├❖ ${config.PREFIX}sʀᴇᴘᴏ*
-*├❖ ${config.PREFIX}ɪɴsᴜʟᴛ*
-*├❖ ${config.PREFIX}sᴀᴠᴇ*
-*├❖ ${config.PREFIX}ᴡɪᴋɪᴘᴇᴅɪᴀ*
-*├❖ ${config.PREFIX}ɢᴘᴀss*
-*├❖ ${config.PREFIX}ɢɪᴛʜᴜʙsᴛᴀʟᴋ*
-*├❖ ${config.PREFIX}ʏᴛs*
-*├❖ ${config.PREFIX}ʏᴛᴠ*
-*╰───────────⋅⋅⋅◈*
-
+                            caption: `*╭────⬡ OTHER MENU ⬡────*
+*├▢ • weather <location>*
+*├▢ • news*
+*├▢ • movie <name>*
+*├▢ • wikipedia <query>*
+*├▢ • define <word>*
+*├▢ • currency <amount> <from> <to>*
+*├▢ • calculator <expression>*
+*├▢ • flip*
+*├▢ • roll*
+*├▢ • fact*
+*├▢ • rcolor*
+*├▢ • countdown <seconds>*
+*├▢ • remind <time> <message>*
+*╰────────────────*
 > ${config.DESCRIPTION}`,
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
                         }, { quoted: receivedMsg });
@@ -553,40 +489,39 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
                     case "14": // Logo Menu
                         await conn.sendMessage(senderID, {
                             image: { url: config.MENU_IMAGE_URL },
-                            caption: `*╭──❍ 🖼️ \`L𝖮𝖦𝖮\` ❍─⋅⋅⋅◈*
-*├❖ ${config.PREFIX}ɴᴇᴏɴʟɪɢʜ*
-*├❖ ${config.PREFIX}ʙʟᴀᴄᴋᴘɪɴᴋ*
-*├❖ ${config.PREFIX}ᴅʀᴀɢᴏɴʙᴀʟʟ*
-*├❖ ${config.PREFIX}3ᴅᴄᴏᴍɪᴄ*
-*├❖ ${config.PREFIX}ᴀᴍᴇʀɪᴄᴀ*
-*├❖ ${config.PREFIX}ɴᴀʀᴜᴛᴏ*
-*├❖ ${config.PREFIX}sᴀᴅɢɪʀʟ*
-*├❖ ${config.PREFIX}ᴄʟᴏᴜᴅs*
-*├❖ ${config.PREFIX}ғᴜᴛᴜʀɪsᴛɪᴄ*
-*├❖ ${config.PREFIX}3ᴅᴘᴀᴘᴇʀ*
-*├❖ ${config.PREFIX}ᴇʀᴀsᴇʀ*
-*├❖ ${config.PREFIX}sᴜɴsᴇᴛ*
-*├❖ ${config.PREFIX}ʟᴇᴀғ*
-*├❖ ${config.PREFIX}ɢᴀʟᴀxʏ*
-*├❖ ${config.PREFIX}sᴀɴs*
-*├❖ ${config.PREFIX}ʙᴏᴏᴍ*
-*├❖ ${config.PREFIX}ʜᴀᴄᴋᴇʀ*
-*├❖ ${config.PREFIX}ᴅᴇᴠɪʟᴡɪɴɢs*
-*├❖ ${config.PREFIX}ɴɪɢᴇʀɪᴀ*
-*├❖ ${config.PREFIX}ʙᴜʟʙ*
-*├❖ ${config.PREFIX}ᴀɴɢᴇʟᴡɪɴɢs*
-*├❖ ${config.PREFIX}ᴢᴏᴅɪᴀᴄ*
-*├❖ ${config.PREFIX}ʟᴜxᴜʀʏ*
-*├❖ ${config.PREFIX}ᴘᴀɪɴᴛ*
-*├❖ ${config.PREFIX}ғʀᴏᴢᴇɴ*
-*├❖ ${config.PREFIX}ᴄᴀsᴛʟᴇ*
-*├❖ ${config.PREFIX}ᴛᴀᴛᴏᴏ*
-*├❖ ${config.PREFIX}ᴠᴀʟᴏʀᴀɴᴛ*
-*├❖ ${config.PREFIX}ʙᴇᴀʀ*
-*├❖ ${config.PREFIX}ᴛʏᴘᴏɢʀᴀᴘʜʏ*
-*├❖ ${config.PREFIX}ʙɪʀᴛʜᴅᴀʏ*
-*╰────────────────⋅⋅⋅◈*
-
+                            caption: `*╭────⬡ LOGO MENU ⬡────*
+*├▢ • neonlight <text>*
+*├▢ • blackpink <text>*
+*├▢ • dragonball <text>*
+*├▢ • 3dcomic <text>*
+*├▢ • america <text>*
+*├▢ • naruto <text>*
+*├▢ • sadgirl <text>*
+*├▢ • clouds <text>*
+*├▢ • futuristic <text>*
+*├▢ • 3dpaper <text>*
+*├▢ • eraser <text>*
+*├▢ • sunset <text>*
+*├▢ • leaf <text>*
+*├▢ • galaxy <text>*
+*├▢ • sans <text>*
+*├▢ • boom <text>*
+*├▢ • hacker <text>*
+*├▢ • devilwings <text>*
+*├▢ • nigeria <text>*
+*├▢ • bulb <text>*
+*├▢ • angelwings <text>*
+*├▢ • zodiac <text>*
+*├▢ • luxury <text>*
+*├▢ • paint <text>*
+*├▢ • frozen <text>*
+*├▢ • castle <text>*
+*├▢ • tatoo <text>*
+*├▢ • valorant <text>*
+*├▢ • bear <text>*
+*├▢ • typography <text>*
+*├▢ • birthday <text>*
+*╰────────────────*
 > ${config.DESCRIPTION}`,
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
                         }, { quoted: receivedMsg });
@@ -636,7 +571,7 @@ contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.re
 
                     default:
                         await conn.sendMessage(senderID, {
-                            text: "❌ Invalid selection. Please reply with a number between 1-15.",
+                            text: "Invalid selection. Please reply with a number between 1-15",
                             contextInfo: commonContextInfo(receivedMsg.key.participant || receivedMsg.key.remoteJid)
                         }, { quoted: receivedMsg });
                 }
